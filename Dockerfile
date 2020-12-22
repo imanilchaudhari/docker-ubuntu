@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     apt-utils \
     curl \
+    libpq-dev \
     # Install git
     git \
     # Install apache
