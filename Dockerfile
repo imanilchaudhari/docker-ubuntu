@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -10,22 +10,22 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     git \
     # Install apache
     apache2 \
-    # Install php 7.4
-    libapache2-mod-php7.4 \
-    php7.4-cli \
-    php7.4-json \
-    php7.4-curl \
-    php7.4-fpm \
-    php7.4-gd \
-    php7.4-ldap \
-    php7.4-mbstring \
-    php7.4-mysql \
-    php7.4-pgsql \
-    php7.4-soap \
-    php7.4-sqlite3 \
-    php7.4-xml \
-    php7.4-zip \
-    php7.4-intl \
+    # Install php
+    libapache2-mod-php \
+    php-cli \
+    php-json \
+    php-curl \
+    php-fpm \
+    php-gd \
+    php-ldap \
+    php-mbstring \
+    php-mysql \
+    php-pgsql \
+    php-soap \
+    php-sqlite3 \
+    php-xml \
+    php-zip \
+    php-intl \
     php-imagick \
     # Install tools
     openssl \
