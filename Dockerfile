@@ -47,4 +47,4 @@ EXPOSE 80
 
 WORKDIR /var/www
 
-CMD apachectl -D FOREGROUND
+CMD  ["nginx", "-g", "daemon off;"]
