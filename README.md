@@ -1,19 +1,19 @@
 # docker-ubuntu
-Docker image built on ubuntu:20.04 with Apache, PHP, Composer &amp; more. 
+Docker image built on ubuntu:20.04 with NGINX, PHP, Composer &amp; more. 
 
 ## sample docker-compose.yml
 ```
 version: '3'
 services:
   app:
-    image: imanilchaudhari/docker-ubuntu:22.04
+    image: imanilchaudhari/docker-ubuntu:22.04-nginx
     restart: 'no'
     ports:
       - 8010:80
     volumes:
       - './:/var/www/html/'
-      - './docker/app/app.conf:/etc/apache2/sites-available/000-default.conf'
-      - './docker/php/php.ini:/etc/php/8.1/apache2/php.ini'
+      - './docker/app/default:/etc/nginx/sites-available/default'
+      - './docker/php/php.ini:/etc/php/8.1/fpm/php.ini'
       - './docker/php/php.ini:/etc/php/8.1/cli/php.ini'
     links:
       - mariadb
